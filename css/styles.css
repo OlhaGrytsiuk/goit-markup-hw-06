@@ -703,6 +703,11 @@ textarea {
   top: 8px;
 }
 
+.close-modal:hover,
+.close-modal:focus {
+  fill: var(--accent-color);
+}
+
 .form-button {
   font-family: inherit;
   background: var(--accent-color);
@@ -810,11 +815,41 @@ line-height: 1.17;
 color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox {
+.checkbox-container {
   margin-bottom: 30px;
   display: flex;
+  width: 423px;
   justify-content: center;
   align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox-icon {
+  border: 2px solid var(--second-font-color);
+  border-radius: 2px;
+  fill: transparent;
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  fill: var(--main-light-color);
+  background-color: var(--accent-color);
+  border: var(--accent-color);
+}
+
+.contract-terms {
+  color: var(--accent-color);
 }
 
 .footer-input {
